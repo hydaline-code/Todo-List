@@ -15,7 +15,6 @@
     "no-unused-vars": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
-    "no-use-before-define": ["error", { "functions": false }],
     "import/extensions": [ 1, {
       "js": "always", "json": "always"
     }]
@@ -24,5 +23,4 @@
     "dist/",
     "build/"
   ]
-  
 }
