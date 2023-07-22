@@ -7,6 +7,7 @@ $b-color : red;
 ul {
   margin: 0;
   padding: 0;
+  width: calc(97.5vw - 1rem);
 }
 
 #todolist {
@@ -15,7 +16,7 @@ ul {
 }
 
 .clear {
-  width: calc(91vw - 1.3rem);
+  width: calc(95vw + 1rem);
   height: 5.5vw;
   border: none;
   background: whitesmoke;
