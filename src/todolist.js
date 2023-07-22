@@ -10,7 +10,7 @@ export const List = () => {
     taskList.appendChild(titletask);
     if (i === 1) {
       titletask.textContent = "Today's To Do";
-      const logo = document.createElement('div');
+      const logo = document.createElement('button');
       const line1 = document.createElement('hr');
       titletask.classList.add('titletask');
       logo.classList.add('logo');
@@ -32,18 +32,7 @@ export const List = () => {
     }
   }
 
-  const listItem = document.createElement('li');
-
-  function Check(event) {
-    const checkbox = event.target;
-    const label = checkbox.nextElementSibling;
-
-    if (checkbox.checked) {
-      label.classList.add('completed');
-    } else {
-      label.classList.remove('completed');
-    }
-  }
+ 
   const arrange = tasks.sort((task1, task2) => task1.index - task2.index);
   arrange.forEach((task) => {
     const listItem = document.createElement('li');
@@ -71,6 +60,22 @@ export const List = () => {
 
     taskList.appendChild(listItem);
   });
+
+  function Check(event) {
+    const checkbox = event.target;
+    const listItem = checkbox.closest('li');
+  
+    if (checkbox.checked) {
+      listItem.classList.add('completed');
+      const line = listItem.nextElementSibling;
+      if (line && line.classList.contains('line')) {
+        line.classList.add('active');
+      }
+
+    } else {
+      listItem.classList.remove('completed');
+    }
+  }
 };
 
 export default List;
