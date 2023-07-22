@@ -6,6 +6,7 @@ import { reloadPage } from './reload.js';
 
 tasks;
 list();
+
 reloadPage();
 
 document.addEventListener('DOMContentLoaded', () => {
