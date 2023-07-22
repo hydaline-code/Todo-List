@@ -1,11 +1,12 @@
 import List from './todolist.js';
 
-export const  reloadPage = () => {
+export const reloadPage = () => {
   const taskList = document.getElementById('todolist');
-  taskList.innerHTML = ''; 
+  taskList.innerHTML = '';
 
   List();
- 
-}
+};
 
 document.addEventListener('DOMContentLoaded', reloadPage);
+
+export default reloadPage;

@@ -4,8 +4,22 @@ import icon from './icon.png';
 export const List = () => {
   const taskList = document.getElementById('todolist');
 
-  for (let i = 1; i <= 2; i++ ) {
+  function Check(event) {
+    const checkbox = event.target;
+    const listItem = checkbox.closest('li');
 
+    if (checkbox.checked) {
+      listItem.classList.add('completed');
+      const line = listItem.nextElementSibling;
+      if (line && line.classList.contains('line')) {
+        line.classList.add('active');
+      }
+    } else {
+      listItem.classList.remove('completed');
+    }
+  }
+
+  for (let i = 1; i <= 2; i += 1) {
     const titletask = document.createElement('li');
     taskList.appendChild(titletask);
     if (i === 1) {
@@ -32,7 +46,6 @@ export const List = () => {
     }
   }
 
- 
   const arrange = tasks.sort((task1, task2) => task1.index - task2.index);
   arrange.forEach((task) => {
     const listItem = document.createElement('li');
@@ -60,22 +73,6 @@ export const List = () => {
 
     taskList.appendChild(listItem);
   });
-
-  function Check(event) {
-    const checkbox = event.target;
-    const listItem = checkbox.closest('li');
-  
-    if (checkbox.checked) {
-      listItem.classList.add('completed');
-      const line = listItem.nextElementSibling;
-      if (line && line.classList.contains('line')) {
-        line.classList.add('active');
-      }
-
-    } else {
-      listItem.classList.remove('completed');
-    }
-  }
 };
 
 export default List;
