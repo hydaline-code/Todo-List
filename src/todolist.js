@@ -1,7 +1,7 @@
 import { tasks } from './todo.js';
 import icon from './icon.png';
 
-export const List = () => {
+export const list = () => {
   const taskList = document.getElementById('todolist');
 
   function Check(event) {
@@ -75,4 +75,4 @@ export const List = () => {
   });
 };
 
-export default List;
+export default list;

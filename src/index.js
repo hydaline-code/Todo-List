@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import './style.scss';
 import { tasks } from './todo.js';
-import List from './todolist.js';
-import { reloadPage } from './reload';
+import { list } from './todolist.js';
+import { reloadPage } from './reload.js';
 
 tasks;
-List();
+list();
 reloadPage();
 
 document.addEventListener('DOMContentLoaded', () => {
