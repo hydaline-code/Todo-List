@@ -1,9 +1,9 @@
-import { forEach } from 'lodash';
 import { allTasks } from './functionality.js';
 import icon from './icon.png';
-import checks from './completed.js';
+import checkCompletedTask from './checkcompletedtask.js';
+import updateTaskIndexes from './updateIndexes.js';
 
-export const displaylist = () => {
+const displaylist = () => {
   const taskList = document.getElementById('todolist');
   taskList.innerHTML = '';
 
@@ -78,16 +78,27 @@ export const displaylist = () => {
   allTasks.forEach((task, index) => {
     const listItem = document.createElement('li');
     listItem.classList.add('list');
+    listItem.id = task.index;
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.className = 'box';
-    checkbox.addEventListener('change', checks);
+    checkbox.id = task.index;
+    checkbox.checked = task.completed;
+
+    checkbox.addEventListener('change', () => {
+      checkCompletedTask(task.index);
+    });
 
     const label = document.createElement('label');
     label.classList.add('mytask');
+    label.id = `label-${task.index}`;
     label.textContent = task.description;
     label.htmlFor = checkbox.id;
+
+    if (task.completed) {
+      label.classList.add('completed');
+    }
 
     const button = document.createElement('button');
     button.className = 'icon';
@@ -96,12 +107,6 @@ export const displaylist = () => {
     if ((index + 1) % 2 !== 0) {
       listItem.classList.add('odd');
     }
-
-    const updateTaskIndexes = () => {
-      allTasks.forEach((task, index) => {
-        task.index = index;
-      });
-    };
 
     button.addEventListener('click', (event) => {
       button.style.display = 'none';

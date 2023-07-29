@@ -63,6 +63,10 @@ li {
   margin-right: 1rem;
 }
 
+.completed {
+  text-decoration: line-through;
+}
+
 .box {
   margin-left: 1rem;
 }
@@ -75,10 +79,6 @@ label {
 
 input[type="checkbox"] {
   margin-left: 0.5rem;
-}
-
-.completed {
-  text-decoration: line-through;
 }
 
 .adtask {
