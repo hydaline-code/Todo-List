@@ -1,42 +1,26 @@
-body {
-  max-width: 375px;
-  border: solid 1px yellow;
-  margin: 0 auto;
-}
-
 .Task {
-  border: solid rgb(245, 54, 54) 1px;
-  width: 375px;
-}
-
-#header {
-  border: solid red 1px;
+  width: calc(95vw - 1rem);
 }
 
 ul {
   margin: 0;
   padding: 0;
-  width: 375px;
+  width: calc(95vw - 1rem);
 }
 
 #todolist {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  width: 375px;
-}
-
-.list {
-  background: gainsboro;
 }
 
 .odd {
-  background: blue;
+  background: rgb(200, 200, 255);
 }
 
 .clear {
-  width: 375px;
+  width: 100%;
   height: 5.5vw;
   border: none;
-  background: whitesmoke;
+  background: rgb(250, 214, 214);
   margin: 0;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -44,11 +28,11 @@ ul {
 .icon {
   margin-right: 0.5rem;
   border: none;
-  background: white;
 }
 
 .edit-icon {
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
+  padding-top: 0.2rem;
   border: blue solid 2px;
 }
 
@@ -59,7 +43,7 @@ ul {
 .delete-icon {
   border: blue solid 2px;
   margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
 }
 
 .delete-icon:hover {
@@ -73,10 +57,6 @@ ul {
 li {
   display: flex;
   list-style: none;
-  width: 375px;
-}
-
-.list {
   margin-right: 1rem;
 }
 
