@@ -45,7 +45,7 @@ export const displaylist = () => {
       localStorage.setItem('tasks', JSON.stringify(allTasks));
       if (event.key === 'Enter' && taskInput.value.trim() !== '') {
         const description = taskInput.value.trim();
-        const tasknum = allTasks.length;
+        const tasknum = allTasks.length + 1;
         const newTask = {
           description,
           index: tasknum,
@@ -128,7 +128,8 @@ export const displaylist = () => {
       const editTask = (index, edited) => {
         const allTasks = JSON.parse(localStorage.getItem('tasks'));
         allTasks.forEach((task) => {
-          if (task.index === index) {
+          console.log(index + 1)
+          if (task.index === (index +1)) {
             task.description = edited;
           }
           localStorage.setItem('tasks', JSON.stringify(allTasks));
