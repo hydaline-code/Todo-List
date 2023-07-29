@@ -1,7 +1,3 @@
+export const allTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-
-
-export const allTasks = [];
-
-//loadTasks();
-export default  allTasks;
+export default allTasks;
