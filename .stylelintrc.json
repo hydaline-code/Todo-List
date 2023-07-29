@@ -4,6 +4,7 @@
   "rules": {
     "at-rule-no-unknown": null,
     "no-descending-specificity":null,
+    "no-duplicate-selectors":null,
     "declaration-block-no-shorthand-property-overrides": null,
     "declaration-block-semicolon-space-before": "never",
     "scss/at-rule-no-unknown": [

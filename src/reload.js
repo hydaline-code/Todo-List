@@ -1,12 +1,13 @@
-import List from './todolist.js';
+import { displaylist } from './display.js';
+import { allTasks } from './functionality.js';
 
-export const reloadPage = () => {
-  const taskList = document.getElementById('todolist');
-  taskList.innerHTML = '';
-
-  List();
+const reloadPage = () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const storedTasks = localStorage.getItem('tasks');
+    if (storedTasks) {
+      allTasks = JSON.parse(storedTasks);
+      displaylist(); // Call displaylist() after retrieving tasks from local storage
+    }
+  });
 };
-
-document.addEventListener('DOMContentLoaded', reloadPage);
-
-export default reloadPage;
+// export default reloadPage;
