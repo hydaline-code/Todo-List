@@ -99,7 +99,7 @@ export const displaylist = () => {
 
     const updateTaskIndexes = () => {
       allTasks.forEach((task, index) => {
-        task.index = index;
+        task.index = index+1;
       });
     };
 
