@@ -128,8 +128,7 @@ export const displaylist = () => {
       const editTask = (index, edited) => {
         const allTasks = JSON.parse(localStorage.getItem('tasks'));
         allTasks.forEach((task) => {
-          console.log(index + 1)
-          if (task.index === (index +1)) {
+          if (task.index === (index + 1)) {
             task.description = edited;
           }
           localStorage.setItem('tasks', JSON.stringify(allTasks));
