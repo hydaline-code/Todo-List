@@ -84,6 +84,7 @@ input[type=checkbox] {
   display: flex;
   justify-content: space-between;
 }
+
 .adtask .icon2 {
   border: none;
   background: none;
@@ -95,6 +96,7 @@ input[type=checkbox] {
   display: flex;
   justify-content: space-between;
 }
+
 .titletask .logo {
   background-image: url("./icon.png");
   background-repeat: no-repeat;
