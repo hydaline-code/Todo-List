@@ -1,4 +1,4 @@
-import { tasks } from './todo.js';
+//import { tasks } from './todo.js';
 import icon from './icon.png';
 
 export const list = () => {

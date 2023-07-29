@@ -1,12 +1,12 @@
 export const tasks = [
   {
-    description: 'FRONT-END DEV ',
+    description: ' ',
     completed: false,
     index: 4,
   },
 
   {
-    description: 'WEB DEVELOPMENT ',
+    description: '',
     completed: true,
     index: 3,
   },

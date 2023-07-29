@@ -1,25 +1,25 @@
 import _ from 'lodash';
 import './style.scss';
-import { tasks } from './todo.js';
-import { list } from './todolist.js';
-import { reloadPage } from './reload.js';
+import  {allTasks } from "./functionality.js";
+import icon from './icon.png';
+import displaylist from './display.js';
 
-tasks;
-list();
+//import reloadPage from './reload.js';
 
-reloadPage();
+
+displaylist(); 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const load = document.querySelector('.logo');
-  load.addEventListener('click', () => {
-    reloadPage();
-  });
+  const storedTasks = localStorage.getItem('tasks');
+  if (storedTasks) {
+    allTasks = JSON.parse(storedTasks);
+    displaylist(); // Call displaylist() after retrieving tasks from local storage
+  }
 });
-
 const clearButton = document.querySelector('.clear');
 clearButton.addEventListener('click', () => {
   const todoList = document.querySelector('#todolist');
-  const completedTasks = todoList.querySelectorAll('.completed');
+  const completedTasks = document.querySelectorAll('.list');
   const active = document.querySelector('.active');
 
   completedTasks.forEach((task) => {
@@ -27,3 +27,5 @@ clearButton.addEventListener('click', () => {
     active.remove();
   });
 });
+
+
