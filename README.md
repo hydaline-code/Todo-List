@@ -91,7 +91,7 @@ You can deploy this project using:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Live demo
-> A live demo link will be uploaded soon.
+> https://hydaline-code.github.io/Todo-List/dist/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
